@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Robot</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <div id="fixed-box">
+            <div>
+                <input type="checkbox" id="toggler">
+                <button>
+                    Fight Mode
+                </button>
+            </div>
+        </div>
+
+        <div id="canvas">
+
+            <div id="sketch-board">
+                <div id="head">
+                    <div id="lens">
+                        <div id="upper-shadow"></div>
+                        <div id="rect"></div>
+                        <div id="eyes"></div>
+                    </div>
+                </div>
+
+                <div id="ear">
+                    <div id="ear-antenna">
+                    </div>
+                </div>
+
+                <div id="small-cap">
+                </div>
+
+                <div id="body">
+                    <div id="shadow-box"></div>
+                    <div id="pocket-area">
+                        <div id="pocket"></div>
+                    </div>
+                </div>
+
+                <div id="hands">
+                    <div class="hand"></div>
+                    <div class="hand"></div>
+                </div>
+            </div>
+
+            <div id="robot-shadow"></div>
+        </div>
+    </main>
+
+    <script>
+        const toggler = document.querySelector("#toggler");
+        const canvas = document.querySelector("#canvas");
+        toggler.onchange = function()
+        {
+            canvas.className = this.checked ? "fight-mode" : " ";
+        }
+    </script>
+</body>
+</html>
